@@ -4,7 +4,7 @@
 [![Maintainer](https://img.shields.io/badge/maintainer-DomHouse.it-blue.svg)](https://www.domhouse.it)
 
 Una Custom Card dal design premium per monitorare in tempo reale le tue sfide **Octopus PowerUp** su Home Assistant.  
-Questa card è il compagno visivo perfetto per l'integrazione [Octopus PowerUp Helper](https://github.com/tuo_username/ha-octopus-powerup).
+Questa card è il compagno visivo perfetto per l'integrazione [Octopus PowerUp Helper](https://github.com/SalvatoreITA/Octopus-PowerUp-Helper/).
 
 *(Inserisci qui lo screenshot della tua card finita)*
 
@@ -14,13 +14,9 @@ Questa card è il compagno visivo perfetto per l'integrazione [Octopus PowerUp H
 - ⚙️ **100% UI Editor:** Nessun codice YAML da scrivere. La card dispone di un editor grafico completo per attivare/disattivare il pannello "Strategia" o forzare il tema scuro.
 - 🔌 **Plug & Play:** Rileva automaticamente i sensori creati dall'integrazione ufficiale senza doverli configurare a mano.
 
----
-
 ## ⚠️ Prerequisiti
 Per far funzionare questa card, **DEVI** prima installare il componente base che calcola i dati.
-👉 **[Scarica l'integrazione backend da qui](https://github.com/tuo_username/ha-octopus-powerup)**.
-
----
+👉 **[Scarica l'integrazione backend da qui](https://github.com/SalvatoreITA/Octopus-PowerUp-Helper/)**.
 
 ## 📦 Installazione
 
@@ -30,7 +26,7 @@ Poiché la card non è ancora tra i repository predefiniti di HACS, puoi aggiung
 1. Apri **HACS** nel tuo Home Assistant.
 2. Vai nella sezione **Frontend** (o Interfaccia Utente).
 3. Clicca sui tre puntini in alto a destra e seleziona **Repository personalizzati**.
-4. Incolla l'URL di questo repository: `https://github.com/tuo_username/domhouse-octopus-powerup-card`
+4. Incolla l'URL di questo repository: `https://github.com/SalvatoreITA/DomHouse-Octopus-PowerUp-Card`
 5. Scegli la categoria **Lovelace** (o Dashboard) e clicca su Aggiungi.
 6. Cerca "DomHouse Octopus PowerUp", clicca su **Scarica** e ricarica la pagina del browser.
 
@@ -41,8 +37,6 @@ Poiché la card non è ancora tra i repository predefiniti di HACS, puoi aggiung
 4. Aggiungi una risorsa con URL `/local/domhouse-octopus-powerup-card.js` e seleziona il tipo **Modulo JavaScript**.
 5. Ricarica la pagina.
 
----
-
 ## ⚙️ Come Usarla
 
 1. Vai sulla tua Plancia (Dashboard) di Home Assistant.
@@ -52,10 +46,11 @@ Poiché la card non è ancora tra i repository predefiniti di HACS, puoi aggiung
 5. Usa l'editor visivo per personalizzare il titolo o nascondere i suggerimenti di strategia.
 6. Salva e goditi il tuo PowerUp!
 
----
+## ☕ Supporta il Progetto
 
-## 🤝 Supporto e Ringraziamenti
-Progetto realizzato e curato da **[DomHouse.it](https://www.domhouse.it)**. 
-Se questa card ti è stata utile per risparmiare sulla bolletta, condividila con la community!
+Ogni piccolo supporto fa un'enorme differenza: mi aiuta a mantenere vivo l'entusiasmo e mi stimola a creare e condividere nuove soluzioni per la community. Grazie di cuore per il tuo aiuto! 🚀
 
-> **Disclaimer:** Questo progetto è indipendente e non è in alcun modo affiliato, sponsorizzato o supportato ufficialmente da Octopus Energy.
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/salvatore_dh)
+
+## ❤️ Crediti
+Sviluppato da [Salvatore Lentini - DomHouse.it](https://www.domhouse.it)
