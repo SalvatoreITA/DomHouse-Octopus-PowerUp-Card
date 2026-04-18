@@ -6,7 +6,9 @@
 Una Custom Card dal design premium per monitorare in tempo reale le tue sfide **Octopus PowerUp** su Home Assistant.  
 Questa card è il compagno visivo perfetto per l'integrazione [Octopus PowerUp Helper](https://github.com/SalvatoreITA/Octopus-PowerUp-Helper/).
 
-*(Inserisci qui lo screenshot della tua card finita)*
+<div align="center">
+  <img src="SCREEN.jpg" alt="Card Preview" width="300">
+</div>
 
 ## ✨ Caratteristiche
 - 🎨 **Design Moderno:** Effetto "Glassmorphism", sfumature e supporto nativo al Tema Scuro/Chiaro di Home Assistant.
