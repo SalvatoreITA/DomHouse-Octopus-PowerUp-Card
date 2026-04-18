@@ -1,7 +1,7 @@
 {
-  "name": "DomHouse Octopus Card",
+  "name": "DomHouse Octopus PowerUp Card",
   "content_in_root": true,
-  "filename": "domhouse-octopus-card.js",
+  "filename": "domhouse-octopus-powerup-card.js",
   "render_readme": true,
   "homeassistant": "2024.1.0"
 }
