@@ -3,16 +3,16 @@
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/hacs/integration)
 [![Maintainer](https://img.shields.io/badge/maintainer-DomHouse.it-blue.svg)](https://www.domhouse.it)
 
-## 🎁 Sconto Octopus
-
-Se devi attivare un nuovo abbonamento con Octopus Energy puoi usare questo [link](https://octopusenergy.it/octo-friends/quiet-gaur-553): otterrai **uno sconto fino a 50 €**
-
 Una Custom Card dal design premium per monitorare in tempo reale le tue sfide **Octopus PowerUp** su Home Assistant.  
 Questa card è il compagno visivo perfetto per l'integrazione [Octopus PowerUp Helper](https://github.com/SalvatoreITA/Octopus-PowerUp-Helper/).
 
 <div align="center">
   <img src="SCREEN.jpg" alt="Card Preview" width="300">
 </div>
+
+## 🎁 Sconto Octopus
+
+Se devi attivare un nuovo abbonamento con Octopus Energy puoi usare questo [link](https://octopusenergy.it/octo-friends/quiet-gaur-553): otterrai **uno sconto fino a 50 €**
 
 ## ✨ Caratteristiche
 - 🎨 **Design Moderno:** Effetto "Glassmorphism", sfumature e supporto nativo al Tema Scuro/Chiaro di Home Assistant.
