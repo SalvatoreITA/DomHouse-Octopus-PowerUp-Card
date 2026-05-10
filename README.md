@@ -1,7 +1,8 @@
 # 🐙 DomHouse Octopus PowerUp Card per Home Assistant
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/hacs/integration)
-[![Maintainer](https://img.shields.io/badge/maintainer-DomHouse.it-blue.svg)](https://www.domhouse.it)
+[![version](https://img.shields.io/badge/version-v1.0.0-blue.svg)]()
+[![maintainer](https://img.shields.io/badge/maintainer-Salvatore_Lentini_--_DomHouse.it-green.svg)](https://www.domhouse.it)
 
 Una Custom Card dal design premium per monitorare in tempo reale le tue sfide **Octopus PowerUp** su Home Assistant.  
 Questa card è il compagno visivo perfetto per l'integrazione [Octopus PowerUp Helper](https://github.com/SalvatoreITA/Octopus-PowerUp-Helper/).
