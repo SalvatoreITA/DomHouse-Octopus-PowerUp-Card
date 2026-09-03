@@ -53,6 +53,24 @@ Poiché la card non è ancora tra i repository predefiniti di HACS, puoi aggiung
 5. Usa l'editor visivo per personalizzare il titolo o nascondere i suggerimenti di strategia.
 6. Salva e goditi il tuo PowerUp!
 
+## 🎁 Bonus: Octopus Power Up - Notifiche Smart (Blueprint)
+
+Un Blueprint per automatizzare le notifiche della tua sessione "Power Up" su Home Assistant. 
+Questo strumento gestisce in totale autonomia gli avvisi di inizio e fine evento, calcolando l'esito della tua sfida e il tuo bottino in tempo reale.
+
+## ✨ Cosa fa questo Blueprint?
+
+* **Fischio d'inizio:** Ti invia una notifica nel minuto esatto in cui inizia il Power Up, ricordandoti la tua media storica in kWh (Baseline) in modo da sapere subito qual è la soglia che devi superare.
+* **Arbitro a fine partita:** Nell'istante in cui la sfida termina, legge il tuo consumo live e lo confronta con la tua media prima che il sensore si azzeri.
+* **Esito dinamico:** A seconda del tuo risultato, riceverai uno dei 2 messaggi personalizzati:
+  * 🎉 **Bottino Conquistato:** Se hai superato la tua media, riceverai i complimenti e il calcolo esatto dei kWh di energia gratuita che sei riuscito ad accumulare.
+  * ❌ **Power Up Fallito:** Se sei rimasto sotto o in linea con la tua media, ricordandoti che per questa volta non ci sono bonus.
+
+Nella cartella `blueprints` di questo repository troverai i file YAML pronti all'uso.
+
+### 🎉 Blueprint
+[![Importa Blueprint in Home Assistant](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https://raw.githubusercontent.com/SalvatoreITA/DomHouse-Octopus-PowerUp-Card/refs/heads/main/blueprints/octopus_power_up_notifiche.yaml)
+
 ## ☕ Supporta il Progetto
 
 Ogni piccolo supporto fa un'enorme differenza: mi aiuta a mantenere vivo l'entusiasmo e mi stimola a creare e condividere nuove soluzioni per la community. Grazie di cuore per il tuo aiuto! 🚀
