@@ -1,0 +1,90 @@
+blueprint:
+  name: "🐙 Octopus Power Up: Notifiche Smart"
+  description: >  
+    Gestisce automaticamente gli avvisi di Inizio e Fine per le sessioni Power Up di Octopus, ricordandoti di massimizzare i consumi e calcolando il tuo bottino finale di energia gratuita.
+
+    ⚙️ **Versione**: 1.0.0
+
+    👨‍💻 **Sviluppatore**: Salvatore Lentini
+
+    🌐 **Sito Web**: [www.domhouse.it](https://www.domhouse.it)
+  domain: automation
+  input:
+    notify_service:
+      name: Servizio di Notifica
+      description: "Il servizio di notifica a cui inviare i messaggi (es. notify.notify, notify.mobile_app_tuo_iphone, notify.telegram)"
+      default: "notify.notify"
+      selector:
+        text:
+
+mode: single
+
+trigger:
+  # Trigger 1: Inizio Evento
+  - platform: template
+    value_template: >
+      {{ states('time.inizio_powerup') not in ['unknown', 'unavailable'] and now().strftime('%H:%M') == states('time.inizio_powerup')[:5] }}
+    id: "inizio"
+    
+  # Trigger 2: Fine Evento
+  - platform: template
+    value_template: >
+      {{ states('time.fine_powerup') not in ['unknown', 'unavailable'] and now().strftime('%H:%M') == states('time.fine_powerup')[:5] }}
+    id: "fine"
+
+condition:
+  # L'automazione scatta SOLO se oggi è il giorno segnato sul calendario
+  - condition: template
+    value_template: "{{ states('date.data_powerup') == now().strftime('%Y-%m-%d') }}"
+
+action:
+  # Lettura delle variabili live prima di processare l'esito
+  - variables:
+      consumo: "{{ states('sensor.powerup_consumo_live') | float(0) }}"
+      baseline: "{{ states('sensor.powerup_baseline_media') | float(0) }}"
+      bonus: "{{ (consumo - baseline) | round(3) }}"
+
+  - choose:
+      # ==========================================
+      # AZIONE PER L'INIZIO DELL'EVENTO
+      # ==========================================
+      - conditions:
+          - condition: trigger
+            id: "inizio"
+        sequence:
+          - service: !input notify_service
+            data:
+              title: "⚡ Inizia il Power Up!"
+              message: >
+                Accendi tutto! Il Power Up è appena iniziato. 
+                Devi superare la tua media di {{ baseline }} kWh per ottenere energia gratis. 
+                Corri a controllare il bottino sulla tua plancia! 🏃‍♂️🚀
+
+      # ==========================================
+      # AZIONI PER LA FINE DELL'EVENTO (ESITO)
+      # ==========================================
+      - conditions:
+          - condition: trigger
+            id: "fine"
+        sequence:
+          - choose:
+              # CASO 1: VITTORIA (Consumo > Baseline)
+              - conditions:
+                  - condition: template
+                    value_template: "{{ consumo > baseline }}"
+                sequence:
+                  - service: !input notify_service
+                    data:
+                      title: "🎉 Bottino Power Up Conquistato!"
+                      message: >
+                        Bravissimo! Hai consumato in totale {{ consumo }} kWh, superando la tua media di {{ baseline }} kWh. 
+                        Hai appena accumulato {{ bonus }} kWh di energia completamente in regalo! 💰
+              
+            # CASO 2: SCONFITTA (Nessun superamento o consumo inferiore alla media)
+            default:
+              - service: !input notify_service
+                data:
+                  title: "❌ Power Up Fallito"
+                  message: >
+                    Peccato! Hai consumato {{ consumo }} kWh, restando sotto o in linea con la tua media di {{ baseline }} kWh. 
+                    Nessun bonus accumulato stasera, andrà meglio al prossimo! 🔌
